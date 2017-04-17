@@ -3,8 +3,9 @@ import Geometry.Circle;
 public class Main {
 
 	public static void main(String[] args) {
-		Circle c=new Circle();
-		
+		for(int i=0;i<n;i++){
+			System.out.println("11");
+		}
 	}
 
 }
