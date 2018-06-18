@@ -1,6 +1,6 @@
 package strings;
 
-import datastructure.SparsaTable;
+import datastructure.SparseTable;
 import java.util.Arrays;
 
 public class SuffixArray {
@@ -75,7 +75,7 @@ public class SuffixArray {
     }
 
     public int getPreffix(int i, int j) {
-        SparsaTable t = new SparsaTable(n);
+        SparseTable t = new SparseTable(n);
         t.init(lcp);
         int l = suffixrank[stp][i], r = suffixrank[stp][j];
         if (l > r) {
