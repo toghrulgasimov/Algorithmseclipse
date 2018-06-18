@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class SuffixArray {
 
-    public int[][] suffixrank;//  using namespace std   int main using namespace syd
+    public int[][] suffixrank;
     public Tuple[] T;
     public Integer[] lcp;
     public int n;
