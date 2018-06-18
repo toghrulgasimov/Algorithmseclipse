@@ -1,13 +1,13 @@
 package strings;
 
-import datastructure.SparseTable;
+import datastructure.SparsaTable;
 import java.util.Arrays;
 
 public class SuffixArray {
 
     public int[][] suffixrank;//  using namespace std   int main using namespace syd
     public Tuple[] T;
-    public int[] lcp;
+    public Integer[] lcp;
     public int n;
     public int stp;
 
@@ -56,7 +56,7 @@ public class SuffixArray {
     }
 
     public void computeLCP(String s) {
-        lcp = new int[n];
+        lcp = new Integer[n];
         lcp[0] = 0;
         int h = 0;
         for (int i = 0; i < n; i++) {
@@ -75,7 +75,15 @@ public class SuffixArray {
     }
 
     public int getPreffix(int i, int j) {
-        SparseTable <Integer>t = new SparseTable(n);
+    	Integer[]a = null;
+        SparsaTable<Integer> t = new SparsaTable<Integer>(a) {
+			@Override
+			public Integer merge(Object a, Object b) {
+				Integer x = (Integer)a, y = (Integer)b;
+				return Math.min(x, y);
+			}
+        	
+		};
         t.init(lcp);
         int l = suffixrank[stp][i], r = suffixrank[stp][j];
         if (l > r) {
