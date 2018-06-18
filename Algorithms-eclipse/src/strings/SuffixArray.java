@@ -75,7 +75,7 @@ public class SuffixArray {
     }
 
     public int getPreffix(int i, int j) {
-        SparseTable t = new SparseTable(n);
+        SparseTable <Integer>t = new SparseTable(n);
         t.init(lcp);
         int l = suffixrank[stp][i], r = suffixrank[stp][j];
         if (l > r) {

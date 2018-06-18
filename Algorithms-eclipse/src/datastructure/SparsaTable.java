@@ -1,12 +1,12 @@
 package datastructure;
 
 
-public abstract class SparseTable <TT>{
+public abstract class SparsaTable <TT>{
     public Object[][] M;
     public int[] log;
     public int n, k;
     public abstract TT merge(Object a, Object b);
-    public SparseTable(TT[] a) {
+    public SparsaTable(TT[] a) {
         log = new int[a.length + 1];
         log[1] = 0;
         this.n = a.length;
